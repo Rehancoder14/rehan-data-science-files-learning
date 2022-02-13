@@ -1,0 +1,9 @@
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
+
+data = pd.read_csv("D:\datasets\chess_games.csv")
+x = data.iloc[:,3:10]
+y = data.iloc[:,12]
+labcode_X1 = LabelEncoder()
+x[:,1] = labcode_X1.fit_transform(x[:,1])
